@@ -1,0 +1,47 @@
+@hostname = http://127.0.0.1:8888/api/private/v1/
+@token =Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE2MjIyNTMyNTcsImV4cCI6MTYyMjMzOTY1N30.vvkkjd1w3lceB7oFPz_dbEB-Lk08qzwrsdrjDiA5Q3s
+### login
+POST {{hostname}}login HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+### menus 获取菜单
+GET {{hostname}}menus HTTP/1.1
+content-type: application/jsonq
+Authorization: {{token}}
+
+### users 用户数据列表
+GET {{hostname}}users?pagenum=1&pagesize=10 HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+### users 更新用户状态
+PUT {{hostname}}users/509/state/false HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+### users 权限列表状态
+GET {{hostname}}rights/list HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+
+### users 订单列表
+GET {{hostname}}orders?pagenum=1&pagesize=10&query={order_id:28} HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+### users 订单列表
+GET {{hostname}}kuaidi/1106975712662 HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+
+### users 图表用户状态
+GET {{hostname}}reports/type/1 HTTP/1.1
+content-type: application/json
+Authorization: {{token}}
+### users 图表用户状态
+ 

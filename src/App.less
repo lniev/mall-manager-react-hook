@@ -1,0 +1,44 @@
+@import 'assets/css/normalize.css';
+@import 'assets/css/customlize.less';
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  .logo {
+    height: 64px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #fff;
+  }
+  .header {
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    .header-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .header-left {
+      .trigger {
+        color: #000;
+        font-size: 18px;
+      }
+    }
+  }
+  .slider {
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+  }
+  .content {
+    padding: 10px 24px;
+    min-height: 280px;
+    .overflow();
+  }
+}
+
+// .content-card {
+// }
